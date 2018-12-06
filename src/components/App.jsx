@@ -119,7 +119,7 @@ class App extends React.Component {
             </ul>
           </Menu>
           <div style={styles} className="view-container">
-            <Route path="/" component={CompositionPage} />
+            <Route exact path="/" component={CompositionPage} />
             <Route path="/closure" component={ClosurePage} />
             <Route
               path="/higher-order-components"
@@ -141,4 +141,4 @@ class App extends React.Component {
   }
 }
 
-export default withWidth(App);
+export default withWidth({largeWidth: 1200})(App);
